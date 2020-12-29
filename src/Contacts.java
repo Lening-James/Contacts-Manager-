@@ -16,13 +16,5 @@ public class Contacts {
     }
 
 
-//    public static void main(String[] args) {
-//        Contacts contact1 = new Contacts("lening", "rodas", "43534346453");
-//        System.out.println("Name " + "  |  " + "Phone Number");
-//        System.out.println("--------------");
-//        System.out.println(contact1.toString());
-//
-//
-//    }
 
 }
