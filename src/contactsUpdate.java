@@ -47,9 +47,9 @@ public class contactsUpdate {
              ContactList.add(new Contacts(firstName, lastName, phoneNumber));
        System.out.println(firstName + " " + lastName + " is successfully added to contact list." );
    }
-
+// print out the list of contacts
     public static void printContactlist (){
-        System.out.println("name | phone Number ");
+        System.out.println("\nFirstname lastname | Phone Number ");
         Path contactsPaths = Paths.get("Data", "contacts.txt");
         List<String> ContactList = null;
         try {
@@ -62,17 +62,17 @@ public class contactsUpdate {
         }
     }
 
-    public static void searchLastName() {
-        System.out.println("3. Retrieve contacts by name and/or phone number. ");
-        System.out.print(" Name or Number: ");
+    //search contact by name
+    public static void searchContact() {
+    System.out.print(" Name: ");
         Scanner myScanner = new Scanner(System.in);
-        String searchedLastName = myScanner.nextLine();
+        String searchedContact = myScanner.nextLine();
         Path ContactsPath = Paths.get("Data", "contacts.txt");
         List<String> ContactList;
         try {
             ContactList = Files.readAllLines(ContactsPath);
             for (String person : ContactList) {
-                if (person.toLowerCase().contains(searchedLastName.toLowerCase())) {
+                if (person.toLowerCase().contains(searchedContact.toLowerCase())) {
                     System.out.println("Contact:\n" + person);
                 }
             }
@@ -84,20 +84,20 @@ public class contactsUpdate {
     }
 
     public static void deleteContact() {
-        System.out.println("4. Delete contacts by name and/or phone number. ");
-        System.out.print(" Name or Number: ");
+        System.out.println("4. Delete contacts by name ");
+        System.out.print(" Name: ");
         Scanner myScanner = new Scanner(System.in);
         String searchedName = myScanner.nextLine();
         Path ContactsPath = Paths.get("Data", "contacts.txt");
         List<String> ContactList;
         try {
-            ContactList  = Files.readAllLines(ContactsPath); // imports list from original string
-            List<String> newList = new ArrayList<>(); // creates empty list
+            ContactList  = Files.readAllLines(ContactsPath);
+            List<String> newList = new ArrayList<>();
             for (String person :  ContactList ) {
                 if (person.toLowerCase().contains(searchedName)) {
-                    continue; // skips over searchedName
+                    continue;
                 }
-                newList.add(person); // adds remaining names
+                newList.add(person);
             }
             for (String name : newList) {
                 System.out.println(name);
@@ -109,7 +109,7 @@ public class contactsUpdate {
     }
 
     public static void exit() {
-        System.out.println("Goodbye");
+        System.out.println("bye");
         System.exit(0);
     }
 }

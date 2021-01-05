@@ -13,13 +13,13 @@ public class MainManager extends contactsUpdate {
                 else if (userChoice == 2)
                     contactsUpdate.addContact();
                 else if (userChoice == 3)
-                    contactsUpdate.searchLastName();
+                    contactsUpdate.searchContact();
                 else if (userChoice == 4) {
                     contactsUpdate.deleteContact();
                 } else if (userChoice == 5) {
                     contactsUpdate.exit();
                 } else
-                    System.out.println("Invalid input.");
+                    System.out.println("Invalid input, enter one of the five choices above.");
             }
         }
     }
