@@ -50,7 +50,6 @@ public class contactsUpdate {
 
     public static void printContactlist (){
         System.out.println("name | phone Number ");
-        System.out.println("*****************");
         Path contactsPaths = Paths.get("Data", "contacts.txt");
         List<String> ContactList = null;
         try {
@@ -58,8 +57,8 @@ public class contactsUpdate {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        for (int i = 0; i < ContactList.size(); i += 1){
-            System.out.println((i+1) + ": " + ContactList.get(i));
+        for (int i = 0; i < ContactList.size(); i++){
+            System.out.println((i+0) + ": " + ContactList.get(i));
         }
     }
 

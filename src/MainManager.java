@@ -2,8 +2,8 @@ import java.io.IOException;
 
 public class MainManager extends contactsUpdate {
 
-    public interface Main {
-         static void main(String args[]) throws IOException {
+
+    public static void main(String args[]) throws IOException {
 
 
             while(true){
@@ -26,5 +26,5 @@ public class MainManager extends contactsUpdate {
 
 
 
-}
+
 
